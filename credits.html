@@ -1,0 +1,197 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Credits - Valentin Gianesello</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <style>
+    .credits-body {
+      background: #000;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .credits-page {
+      min-height: 100vh;
+      padding: 150px 20px 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .credits-container {
+      width: 100%;
+      max-width: 850px;
+      text-align: center;
+    }
+
+    .credits-container h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .credits-intro {
+      color: #aaa;
+      margin-bottom: 50px;
+      line-height: 1.7;
+    }
+
+    .credit-item {
+      padding: 25px 15px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .credit-item h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #9bcaff;
+    }
+
+    .credit-item p {
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .credit-item a {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color 0.3s ease;
+    }
+
+    .credit-item a:hover {
+      color: #70b7ff;
+    }
+
+    .credits-footer {
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
+      .credits-container h1 {
+        font-size: 2.2rem;
+      }
+
+      .credits-page {
+        padding: 110px 18px 50px;
+      }
+    }
+  </style>
+</head>
+
+<body class="credits-body">
+
+  <!-- Header -->
+  <header>
+    <div class="logo2">Valentin Gianesello</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="overlay" id="overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="info.html">About Me</a>
+    <a href="credits.html">Image Credits</a>
+    <a href="#" id="close-btn">&times; Close</a>
+  </nav>
+
+  <!-- Credits -->
+  <main class="credits-page">
+
+    <section class="credits-container">
+
+      <h1>Image Credits</h1>
+
+      <p class="credits-intro">
+        This page acknowledges the sources and authors
+        of the images used throughout this website.
+      </p>
+
+      <!-- Calabi-Yau Image -->
+      <div class="credit-item">
+
+        <h2>Calabi-Yau Manifold</h2>
+
+        <p>
+          Author: Lunch
+        </p>
+
+        <p>
+          Source:
+          <a href="https://commons.wikimedia.org/wiki/File:Calabi-Yau-alternate.png"
+             target="_blank" rel="noopener noreferrer">
+            Wikimedia Commons
+          </a>
+        </p>
+
+        <p>
+          Original image:
+          <a href="https://upload.wikimedia.org/wikipedia/commons/5/55/Calabi-Yau-alternate.png"
+             target="_blank" rel="noopener noreferrer">
+            View image
+          </a>
+        </p>
+
+        <p>
+          License:
+          <a href="https://creativecommons.org/licenses/by-sa/2.5/"
+             target="_blank" rel="noopener noreferrer">
+            Creative Commons Attribution-ShareAlike 2.5 (CC BY-SA 2.5)
+          </a>
+        </p>
+
+      </div>
+
+      <!-- Neptune Image -->
+      <div class="credit-item">
+
+        <h2>Neptune</h2>
+
+        <p>
+          Source: Sciences et Avenir
+        </p>
+
+        <p>
+          Original image:
+          <a href="https://www.sciencesetavenir.fr/assets/img/2023/08/24/cover-r4x3w1200-64e77771330bd-neptune-storms.jpg"
+             target="_blank" rel="noopener noreferrer">
+            View image
+          </a>
+        </p>
+
+        <p>
+          Photographer and license:
+          To be confirmed from the original publication.
+        </p>
+
+      </div>
+
+      <div class="credits-footer">
+        © 2026 Valentin Gianesello
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+```
