@@ -1,0 +1,3182 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  min-height: 150vh;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Dark overlay for better readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Text inside the hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  margin-top: -180px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Content section */
+.content {
+  background-color: #bfd5d8;
+  color: #333;
+  padding: 50px 20px;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 1001;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 25px;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Menu overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+  text-align: center;
+}
+
+.overlay a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.overlay a:hover {
+  color: #0569dc;
+}
+
+/* Display overlay */
+.overlay.active {
+  transform: translateY(0);
+}
+
+/* Close button */
+#close-btn {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* Hero information */
+.hero-info {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero-info h2 {
+  margin: 5px 0 0;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.hero-info a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.hero-info a:hover {
+  color: #ffcc00;
+}
+
+/* Footer */
+.footer-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-two {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ---- INFO PAGE ---- */
+.info-page {
+  padding: 400px 40px;
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.info-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  margin-top: -250px;
+}
+
+.info-section h1,
+.info-section h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.info-section p,
+.info-section ul {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section ul li::before {
+  content: "• ";
+  color: #ff9900;
+}
+
+.logo2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.info-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info-link:hover {
+  color: #ffcc00;
+}
+
+/* ---- PROJECTS PAGE ---- */
+.projects-body {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+.projects-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 140px 30px 80px;
+
+  /* Neptune background image */
+  background-image: url('https://www.sciencesetavenir.fr/assets/img/2023/08/24/cover-r4x3w1200-64e77771330bd-neptune-storms.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark overlay */
+.projects-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 10, 0.35);
+  z-index: 1;
+}
+
+/* Projects title */
+.projects-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Mobile adaptation */
+@media (max-width: 700px) {
+  .projects-page {
+    padding: 110px 15px 50px;
+    background-attachment: scroll;
+  }
+
+  .projects-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+
+/* ---- CONTACT PAGE ---- */
+
+.contact-body {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Background image */
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 110px 20px 80px;
+
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Calabi-Yau-alternate.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay over the background */
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.20);
+  z-index: 1;
+}
+
+/* Central transparent box */
+.contact-card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 650px;
+  padding: 45px 50px;
+
+  background: rgba(0, 0, 0, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+}
+
+/* Main title */
+.contact-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Introductory text */
+.contact-intro {
+  color: #d0d0d0;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Individual contact sections */
+.contact-item {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-item h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #9bcaff;
+  margin-bottom: 10px;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+  overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+  color: #70b7ff;
+}
+
+/* Mobile adaptation */
+@media (max-width: 700px) {
+  .contact-page {
+    padding: 100px 15px 50px;
+    background-attachment: scroll;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-card h1 {
+    font-size: 2.1rem;
+  }
+
+  .contact-item a {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   PROJECTS PAGE
+===================================== */
+
+.projects-body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}
+
+.projects-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 140px 35px 100px;
+
+    background-image: url('https://www.sciencesetavenir.fr/assets/img/2023/08/24/cover-r4x3w1200-64e77771330bd-neptune-storms.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.projects-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 10, 0.62);
+    z-index: 1;
+}
+
+.projects-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.projects-content > h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.projects-intro {
+    text-align: center;
+    color: #d0d0d0;
+    font-size: 1.05rem;
+    margin-bottom: 65px;
+}
+
+
+/* =====================================
+   PROJECT CATEGORIES
+===================================== */
+
+.project-category {
+    margin-bottom: 55px;
+}
+
+.category-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #a9cfff;
+
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid rgba(169, 207, 255, 0.4);
+}
+
+
+/* =====================================
+   PROJECT GRID
+===================================== */
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+
+/* =====================================
+   PROJECT CARDS
+===================================== */
+
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 350px;
+    max-width: 100%;
+    min-height: 230px;
+    padding: 27px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(8, 13, 25, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background: rgba(20, 35, 58, 0.96);
+    border-color: rgba(169, 207, 255, 0.75);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Card number */
+
+.card-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #8caed5;
+    margin-bottom: 20px;
+}
+
+
+/* Small category label */
+
+.card-category {
+    display: inline-block;
+    width: fit-content;
+
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    color: #a9cfff;
+    margin-bottom: 12px;
+}
+
+
+/* Card title */
+
+.project-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+    color: white;
+}
+
+
+/* Card description */
+
+.project-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #c2c8d2;
+
+    margin-bottom: 25px;
+}
+
+
+/* Arrow */
+
+.card-arrow {
+    margin-top: auto;
+    align-self: flex-end;
+
+    font-size: 1.5rem;
+    color: #a9cfff;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-arrow {
+    transform: translateX(6px);
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .project-card {
+        width: 320px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .projects-page {
+        padding: 110px 18px 60px;
+        background-attachment: scroll;
+    }
+
+    .projects-content > h1 {
+        font-size: 2.4rem;
+    }
+
+    .projects-intro {
+        font-size: 0.95rem;
+        margin-bottom: 45px;
+    }
+
+    .project-category {
+        margin-bottom: 40px;
+    }
+
+    .category-title {
+        font-size: 1.25rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+        min-height: 200px;
+        padding: 23px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   NUMERICAL KLEIN-GORDON PROJECT PAGE
+========================================= */
+
+
+/* GENERAL */
+
+.kg-body {
+    background-color: #050914;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.kg-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("https://www.polytechnique.edu/sites/default/files/styles/contenu_detail/public/content/actualites/images/2023-03/waves-g11da699b5_1920.jpg?itok=JRQvW3NW");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+
+/* Dark overlay */
+
+.kg-hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 5, 20, 0.38);
+
+    z-index: 1;
+
+}
+
+
+/* Hero content */
+
+.kg-hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+
+    padding: 30px;
+
+    margin-top: -20px;
+
+}
+
+
+.kg-label {
+
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #8ecaff;
+
+    margin-bottom: 22px;
+
+}
+
+
+.kg-hero-content h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 3.7rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: white;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+
+    margin-bottom: 25px;
+
+}
+
+
+.kg-hero-content p {
+
+    font-size: 1.15rem;
+
+    color: #d5e4f5;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* Explore button */
+
+.kg-scroll-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(180, 215, 255, 0.65);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    background: rgba(5, 15, 35, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.kg-scroll-button span {
+
+    font-size: 1.2rem;
+
+}
+
+
+.kg-scroll-button:hover {
+
+    background: rgba(50, 120, 200, 0.3);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* Back link */
+
+.kg-hero-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.kg-hero-bottom a {
+
+    color: rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.kg-hero-bottom a:hover {
+
+    color: #8ecaff;
+
+}
+
+
+/* =========================================
+   PDF DOCUMENT SECTION
+========================================= */
+
+.kg-document-section {
+
+    position: relative;
+
+    background: #080e1b;
+
+    padding: 100px 25px 110px;
+
+    text-align: center;
+
+}
+
+
+.kg-section-heading {
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.kg-section-heading h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+
+.kg-section-heading p {
+
+    color: #aebed1;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* PDF container */
+
+.kg-pdf-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: rgba(15, 25, 43, 0.95);
+
+    border: 1px solid rgba(150, 190, 230, 0.2);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+
+}
+
+
+/* PDF header */
+
+.kg-pdf-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: rgba(30, 45, 68, 0.8);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.kg-pdf-icon {
+
+    display: inline-block;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #8ecaff;
+
+    border: 1px solid #8ecaff;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    margin-right: 12px;
+
+}
+
+
+.kg-pdf-title {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.95rem;
+
+    color: white;
+
+}
+
+
+/* Download button */
+
+.kg-download-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: rgba(65, 135, 205, 0.2);
+
+    border: 1px solid rgba(120, 180, 240, 0.6);
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.kg-download-button:hover {
+
+    background: rgba(65, 135, 205, 0.5);
+
+    border-color: #8ecaff;
+
+}
+
+
+/* PDF viewer */
+
+.kg-pdf-viewer {
+
+    width: 100%;
+
+    height: 750px;
+
+    background: #202020;
+
+}
+
+
+.kg-pdf-viewer iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =========================================
+   CONTEXT AND CONTENT SECTIONS
+========================================= */
+
+.kg-information-section {
+
+    padding: 100px 25px;
+
+    background: #0b1424;
+
+}
+
+
+.kg-content-section {
+
+    background: #080e1b;
+
+}
+
+
+.kg-information-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.kg-information-container h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.7rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.kg-information-line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #65aef5;
+
+    margin-bottom: 35px;
+
+}
+
+
+.kg-information-container p {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #c5d0df;
+
+}
+
+
+/* =========================================
+   BACK TO PROJECTS
+========================================= */
+
+.kg-back-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #050914;
+
+}
+
+
+.kg-back-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(150, 195, 240, 0.5);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.kg-back-button:hover {
+
+    background: rgba(60, 130, 200, 0.2);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .kg-hero-content h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .kg-hero-content p {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .kg-document-section {
+
+        padding: 75px 15px;
+
+    }
+
+
+    .kg-section-heading h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .kg-pdf-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .kg-pdf-title {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .kg-pdf-viewer {
+
+        height: 550px;
+
+    }
+
+
+    .kg-information-section {
+
+        padding: 75px 25px;
+
+    }
+
+
+    .kg-information-container h2 {
+
+        font-size: 2.1rem;
+
+    }
+
+
+    .kg-information-container p {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   DIFFERENTIAL GEOMETRY PROJECT PAGE
+========================================= */
+
+
+/* GENERAL */
+
+.dg-body {
+    background-color: #050914;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.dg-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/98/End_of_universe.jpg?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+
+/* Dark overlay */
+
+.dg-hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 5, 20, 0.38);
+
+    z-index: 1;
+
+}
+
+
+/* Hero content */
+
+.dg-hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+
+    padding: 30px;
+
+    margin-top: -20px;
+
+}
+
+
+.dg-label {
+
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #8ecaff;
+
+    margin-bottom: 22px;
+
+}
+
+
+.dg-hero-content h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 3.7rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: white;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+
+    margin-bottom: 25px;
+
+}
+
+
+.dg-hero-content p {
+
+    font-size: 1.15rem;
+
+    color: #d5e4f5;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* Explore button */
+
+.dg-scroll-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(180, 215, 255, 0.65);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    background: rgba(5, 15, 35, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.dg-scroll-button span {
+
+    font-size: 1.2rem;
+
+}
+
+
+.dg-scroll-button:hover {
+
+    background: rgba(50, 120, 200, 0.3);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* Back link */
+
+.dg-hero-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.dg-hero-bottom a {
+
+    color: rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.dg-hero-bottom a:hover {
+
+    color: #8ecaff;
+
+}
+
+
+/* =========================================
+   PDF DOCUMENT SECTION
+========================================= */
+
+.dg-document-section {
+
+    position: relative;
+
+    background: #080e1b;
+
+    padding: 100px 25px 110px;
+
+    text-align: center;
+
+}
+
+
+.dg-section-heading {
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.dg-section-heading h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+
+.dg-section-heading p {
+
+    color: #aebed1;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* PDF container */
+
+.dg-pdf-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: rgba(15, 25, 43, 0.95);
+
+    border: 1px solid rgba(150, 190, 230, 0.2);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+
+}
+
+
+/* PDF header */
+
+.dg-pdf-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: rgba(30, 45, 68, 0.8);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.dg-pdf-icon {
+
+    display: inline-block;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #8ecaff;
+
+    border: 1px solid #8ecaff;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    margin-right: 12px;
+
+}
+
+
+.dg-pdf-title {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.95rem;
+
+    color: white;
+
+}
+
+
+/* Download button */
+
+.dg-download-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: rgba(65, 135, 205, 0.2);
+
+    border: 1px solid rgba(120, 180, 240, 0.6);
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.dg-download-button:hover {
+
+    background: rgba(65, 135, 205, 0.5);
+
+    border-color: #8ecaff;
+
+}
+
+
+/* PDF viewer */
+
+.dg-pdf-viewer {
+
+    width: 100%;
+
+    height: 750px;
+
+    background: #202020;
+
+}
+
+
+.dg-pdf-viewer iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =========================================
+   CONTEXT AND CONTENT SECTIONS
+========================================= */
+
+.dg-information-section {
+
+    padding: 100px 25px;
+
+    background: #0b1424;
+
+}
+
+
+.dg-content-section {
+
+    background: #080e1b;
+
+}
+
+
+.dg-information-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.dg-information-container h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.7rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.dg-information-line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #65aef5;
+
+    margin-bottom: 35px;
+
+}
+
+
+.dg-information-container p {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #c5d0df;
+
+}
+
+
+/* =========================================
+   BACK TO PROJECTS
+========================================= */
+
+.dg-back-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #050914;
+
+}
+
+
+.dg-back-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(150, 195, 240, 0.5);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.dg-back-button:hover {
+
+    background: rgba(60, 130, 200, 0.2);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .dg-hero-content h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .dg-hero-content p {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .dg-document-section {
+
+        padding: 75px 15px;
+
+    }
+
+
+    .dg-section-heading h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .dg-pdf-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .dg-pdf-title {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .dg-pdf-viewer {
+
+        height: 550px;
+
+    }
+
+
+    .dg-information-section {
+
+        padding: 75px 25px;
+
+    }
+
+
+    .dg-information-container h2 {
+
+        font-size: 2.1rem;
+
+    }
+
+
+    .dg-information-container p {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MECHANICAL STABILITY PROJECT PAGE
+========================================= */
+
+
+/* GENERAL */
+
+.ms-body {
+    background-color: #050914;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.ms-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("https://www.radiofrance.fr/pikapi/images/685fa816-8c5c-4277-9706-a24e921f3de6/2048");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+
+/* Dark overlay */
+
+.ms-hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 5, 20, 0.38);
+
+    z-index: 1;
+
+}
+
+
+/* Hero content */
+
+.ms-hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+
+    padding: 30px;
+
+    margin-top: -20px;
+
+}
+
+
+.ms-label {
+
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #8ecaff;
+
+    margin-bottom: 22px;
+
+}
+
+
+.ms-hero-content h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 3.7rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: white;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+
+    margin-bottom: 25px;
+
+}
+
+
+.ms-hero-content p {
+
+    font-size: 1.15rem;
+
+    color: #d5e4f5;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* Explore button */
+
+.ms-scroll-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(180, 215, 255, 0.65);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    background: rgba(5, 15, 35, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.ms-scroll-button span {
+
+    font-size: 1.2rem;
+
+}
+
+
+.ms-scroll-button:hover {
+
+    background: rgba(50, 120, 200, 0.3);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* Back link */
+
+.ms-hero-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.ms-hero-bottom a {
+
+    color: rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.ms-hero-bottom a:hover {
+
+    color: #8ecaff;
+
+}
+
+
+/* =========================================
+   PDF DOCUMENT SECTION
+========================================= */
+
+.ms-document-section {
+
+    position: relative;
+
+    background: #080e1b;
+
+    padding: 100px 25px 110px;
+
+    text-align: center;
+
+}
+
+
+.ms-section-heading {
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.ms-section-heading h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+
+.ms-section-heading p {
+
+    color: #aebed1;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* PDF container */
+
+.ms-pdf-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: rgba(15, 25, 43, 0.95);
+
+    border: 1px solid rgba(150, 190, 230, 0.2);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+
+}
+
+
+/* PDF header */
+
+.ms-pdf-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: rgba(30, 45, 68, 0.8);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.ms-pdf-icon {
+
+    display: inline-block;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #8ecaff;
+
+    border: 1px solid #8ecaff;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    margin-right: 12px;
+
+}
+
+
+.ms-pdf-title {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.95rem;
+
+    color: white;
+
+}
+
+
+/* Download button */
+
+.ms-download-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: rgba(65, 135, 205, 0.2);
+
+    border: 1px solid rgba(120, 180, 240, 0.6);
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.ms-download-button:hover {
+
+    background: rgba(65, 135, 205, 0.5);
+
+    border-color: #8ecaff;
+
+}
+
+
+/* PDF viewer */
+
+.ms-pdf-viewer {
+
+    width: 100%;
+
+    height: 750px;
+
+    background: #202020;
+
+}
+
+
+.ms-pdf-viewer iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =========================================
+   CONTEXT AND CONTENT SECTIONS
+========================================= */
+
+.ms-information-section {
+
+    padding: 100px 25px;
+
+    background: #0b1424;
+
+}
+
+
+.ms-content-section {
+
+    background: #080e1b;
+
+}
+
+
+.ms-information-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.ms-information-container h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.7rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.ms-information-line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #65aef5;
+
+    margin-bottom: 35px;
+
+}
+
+
+.ms-information-container p {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #c5d0df;
+
+}
+
+
+/* =========================================
+   BACK TO PROJECTS
+========================================= */
+
+.ms-back-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #050914;
+
+}
+
+
+.ms-back-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(150, 195, 240, 0.5);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.ms-back-button:hover {
+
+    background: rgba(60, 130, 200, 0.2);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .ms-hero-content h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .ms-hero-content p {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .ms-document-section {
+
+        padding: 75px 15px;
+
+    }
+
+
+    .ms-section-heading h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .ms-pdf-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .ms-pdf-title {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .ms-pdf-viewer {
+
+        height: 550px;
+
+    }
+
+
+    .ms-information-section {
+
+        padding: 75px 25px;
+
+    }
+
+
+    .ms-information-container h2 {
+
+        font-size: 2.1rem;
+
+    }
+
+
+    .ms-information-container p {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   GRAPH THEORY PROJECT PAGE
+========================================= */
+
+
+/* GENERAL */
+
+.tg-body {
+    background-color: #050914;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.tg-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzMc7xYxfTWUgYhpfUHU71OnsWE1k6tJE1x60qQfR-tltSvmxofts_Ntg&s=10");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+
+/* Dark overlay */
+
+.tg-hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 5, 20, 0.38);
+
+    z-index: 1;
+
+}
+
+
+/* Hero content */
+
+.tg-hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+
+    padding: 30px;
+
+    margin-top: -20px;
+
+}
+
+
+.tg-label {
+
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #8ecaff;
+
+    margin-bottom: 22px;
+
+}
+
+
+.tg-hero-content h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 3.7rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: white;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+
+    margin-bottom: 25px;
+
+}
+
+
+.tg-hero-content p {
+
+    font-size: 1.15rem;
+
+    color: #d5e4f5;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* Explore button */
+
+.tg-scroll-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(180, 215, 255, 0.65);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    background: rgba(5, 15, 35, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.tg-scroll-button span {
+
+    font-size: 1.2rem;
+
+}
+
+
+.tg-scroll-button:hover {
+
+    background: rgba(50, 120, 200, 0.3);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* Back link */
+
+.tg-hero-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.tg-hero-bottom a {
+
+    color: rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.tg-hero-bottom a:hover {
+
+    color: #8ecaff;
+
+}
+
+
+/* =========================================
+   PDF DOCUMENT SECTION
+========================================= */
+
+.tg-document-section {
+
+    position: relative;
+
+    background: #080e1b;
+
+    padding: 100px 25px 110px;
+
+    text-align: center;
+
+}
+
+
+.tg-section-heading {
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.tg-section-heading h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+
+.tg-section-heading p {
+
+    color: #aebed1;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* PDF container */
+
+.tg-pdf-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: rgba(15, 25, 43, 0.95);
+
+    border: 1px solid rgba(150, 190, 230, 0.2);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+
+}
+
+
+/* PDF header */
+
+.tg-pdf-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: rgba(30, 45, 68, 0.8);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.tg-pdf-icon {
+
+    display: inline-block;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #8ecaff;
+
+    border: 1px solid #8ecaff;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    margin-right: 12px;
+
+}
+
+
+.tg-pdf-title {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.95rem;
+
+    color: white;
+
+}
+
+
+/* Download button */
+
+.tg-download-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: rgba(65, 135, 205, 0.2);
+
+    border: 1px solid rgba(120, 180, 240, 0.6);
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.tg-download-button:hover {
+
+    background: rgba(65, 135, 205, 0.5);
+
+    border-color: #8ecaff;
+
+}
+
+
+/* PDF viewer */
+
+.tg-pdf-viewer {
+
+    width: 100%;
+
+    height: 750px;
+
+    background: #202020;
+
+}
+
+
+.tg-pdf-viewer iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =========================================
+   CONTEXT AND CONTENT SECTIONS
+========================================= */
+
+.tg-information-section {
+
+    padding: 100px 25px;
+
+    background: #0b1424;
+
+}
+
+
+.tg-content-section {
+
+    background: #080e1b;
+
+}
+
+
+.tg-information-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.tg-information-container h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.7rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.tg-information-line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #65aef5;
+
+    margin-bottom: 35px;
+
+}
+
+
+.tg-information-container p {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #c5d0df;
+
+}
+
+
+/* =========================================
+   BACK TO PROJECTS
+========================================= */
+
+.tg-back-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #050914;
+
+}
+
+
+.tg-back-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid rgba(150, 195, 240, 0.5);
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.tg-back-button:hover {
+
+    background: rgba(60, 130, 200, 0.2);
+
+    border-color: #8ecaff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .tg-hero-content h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .tg-hero-content p {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .tg-document-section {
+
+        padding: 75px 15px;
+
+    }
+
+
+    .tg-section-heading h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .tg-pdf-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .tg-pdf-title {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .tg-pdf-viewer {
+
+        height: 550px;
+
+    }
+
+
+    .tg-information-section {
+
+        padding: 75px 25px;
+
+    }
+
+
+    .tg-information-container h2 {
+
+        font-size: 2.1rem;
+
+    }
+
+
+    .tg-information-container p {
+
+        font-size: 0.95rem;
+
+    }
+
+}

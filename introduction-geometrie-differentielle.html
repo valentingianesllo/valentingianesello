@@ -5,134 +5,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Differential Geometry</title>
+
+    <title>Differential Geometry | Valentin Gianesello</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dg-body">
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">Valentin</a>
+        <div class="logo">Valentin Gianesello</div>
 
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="info.html">Info</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-            <button class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="gd-hero">
-        <div class="gd-hero-content">
-            <p class="gd-subtitle">MATHEMATICS & PHYSICS</p>
-            <h1>Introduction to<br>Differential Geometry</h1>
-            <p class="gd-description">
-                Exploring the mathematical foundations of curved spaces,
-                manifolds and geometric structures.
-            </p>
-        </div>
-    </section>
+    <!-- NAVIGATION MENU -->
+    <nav class="overlay" id="overlay">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="info.html">About Me</a>
+        <a href="credits.html">Credits</a>
+        <a href="#" id="close-btn">&times; Close</a>
+    </nav>
 
-    <!-- PDF Section -->
-    <section class="gd-document-section">
 
-        <div class="gd-section-heading">
-            <p class="gd-label">PROJECT DOCUMENT</p>
-            <h2>Project document</h2>
+    <!-- HERO SECTION -->
+    <section class="dg-hero">
+
+        <div class="dg-hero-overlay"></div>
+
+        <div class="dg-hero-content">
+
+            <span class="dg-label">MATHEMATICAL PROJECT</span>
+
+            <h1>Differential Geometry</h1>
+
             <p>
-                You can read the complete project document below
-                or download it as a PDF file.
+                From Differentiable Manifolds to the Mathematical Foundations
+                of General Relativity
             </p>
+
+            <a href="#project-document" class="dg-scroll-button">
+                Explore the project
+                <span>↓</span>
+            </a>
+
         </div>
 
-        <div class="gd-pdf-container">
-            <iframe
-                src="documents/introduction-geometrie-differentielle.pdf"
-                title="Introduction to Differential Geometry PDF">
-            </iframe>
+        <div class="dg-hero-bottom">
+            <a href="projects.html">← Back to projects</a>
         </div>
-
-        <a
-            href="documents/introduction-geometrie-differentielle.pdf"
-            class="gd-download-button"
-            target="_blank">
-            Download PDF
-        </a>
 
     </section>
 
-    <!-- Context Section -->
-    <section class="gd-content-section">
 
-        <div class="gd-content-block">
-            <p class="gd-label">OVERVIEW</p>
+    <!-- PDF SECTION -->
+    <section class="dg-document-section" id="project-document">
+
+        <div class="dg-section-heading">
+
+            <span class="dg-label">PROJECT DOCUMENTATION</span>
+
+            <h2>Book</h2>
+
+            <p>
+                Access the complete book below.
+            </p>
+
+        </div>
+
+
+        <div class="dg-pdf-container">
+
+            <div class="dg-pdf-header">
+
+                <div>
+                    <span class="dg-pdf-icon">PDF</span>
+
+                    <span class="dg-pdf-title">
+                        Introduction to Differential Geometry
+                    </span>
+                </div>
+
+                <a
+                    href="document/Introduction_à_la_Géométrie_différentielle (23).pdf"
+                    download
+                    class="dg-download-button">
+
+                    Download PDF ↓
+
+                </a>
+
+            </div>
+
+
+            <div class="dg-pdf-viewer">
+
+                <iframe
+                    src="document/Introduction_à_la_Géométrie_différentielle (23).pdf"
+                    title="Introduction to Differential Geometry"
+                    width="100%"
+                    height="850px">
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTEXT SECTION -->
+    <section class="dg-information-section">
+
+        <div class="dg-information-container">
+
+            <span class="dg-label">01 — BACKGROUND</span>
+
             <h2>Context</h2>
 
-            <p>
-                Differential geometry is a mathematical field that studies
-                geometric objects using tools from differential calculus.
-                It provides a framework for describing curved spaces,
-                surfaces and manifolds.
-            </p>
+            <div class="dg-information-line"></div>
 
             <p>
-                Its concepts play an important role in modern mathematics
-                and theoretical physics, particularly in general relativity,
-                where spacetime is described using the language of geometry.
+                This work was carried out during an academic internship in my
+                second year of undergraduate studies (L2), under the supervision
+                of Paul LeBreton, one of my mathematics professors and a PhD
+                candidate specialising in differential geometry, particularly
+                in the study of partial differential equations.
+
+                The aim of this project was to develop a rigorous mathematical
+                introduction to differential geometry, exploring the geometric
+                tools that play a fundamental role in modern theoretical physics.
             </p>
+
         </div>
 
     </section>
 
-    <!-- Content Section -->
-    <section class="gd-content-section gd-content-alternate">
 
-        <div class="gd-content-block">
-            <p class="gd-label">SUBJECT</p>
-            <h2>Content of the project</h2>
+    <!-- CONTENT SECTION -->
+    <section class="dg-information-section dg-content-section">
 
-            <p>
-                This project provides an introduction to the fundamental
-                concepts of differential geometry, from the mathematical
-                description of curves and surfaces to the more general
-                framework of differentiable manifolds.
-            </p>
+        <div class="dg-information-container">
+
+            <span class="dg-label">02 — BOOK OVERVIEW</span>
+
+            <h2>Content</h2>
+
+            <div class="dg-information-line"></div>
 
             <p>
-                The aim is to understand the geometric structures that
-                allow us to describe curved spaces and to explore the
-                mathematical tools used to study them.
+                This book provides a comprehensive introduction to differential
+                geometry, with the aim of developing the mathematical tools
+                necessary to understand differentiable manifolds and the
+                mathematical foundations of General Relativity.
+
+                The presentation is rigorous and includes detailed derivations
+                and mathematical proofs, progressively introducing the concepts
+                and structures underlying Einstein's theory of gravitation.
+
+                It also features numerous exercises exploring both the
+                mathematical formalism and its physical applications, including
+                spacetime metrics, black holes, wormholes and other topics
+                related to General Relativity.
             </p>
+
         </div>
 
     </section>
 
-    <!-- Back to Projects -->
-    <section class="gd-back-section">
-        <a href="projects.html" class="gd-back-button">
-            ← Back to projects
+
+    <!-- BACK TO PROJECTS -->
+    <section class="dg-back-section">
+
+        <a href="projects.html" class="dg-back-button">
+            ← Back to all projects
         </a>
+
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Valentin. All rights reserved.</p>
+
+    <!-- FOOTER -->
+    <footer class="footer-one">
+
+        <div class="footer-container">
+            © 2026 Valentin Gianesello. All rights reserved.
+        </div>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
 </html>
+
+
